@@ -8,7 +8,6 @@ import java.util.WeakHashMap;
  * @author hakan.ozerden
  */
 public class Identity {
-
 	private final String value;
 	private final static Map<String, Identity> identityCache = new WeakHashMap<>();
 
@@ -24,7 +23,7 @@ public class Identity {
 		Objects.requireNonNull(value);
 		// validation : cross-cutting concern
 		if (!isValidate(value))
-			throw new IllegalArgumentException("This is not  valid identity no.");
+			throw new IllegalArgumentException("This is not valid identity no.");
 		// caching -> Fly-weight (GoF) : cross-cutting concern
 		synchronized (Identity.class) {
 			var identity = identityCache.get(value);

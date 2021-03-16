@@ -1,5 +1,8 @@
 package com.example.hr.domain;
 
-public class Department {
-
+/**
+ * @author hakan.ozerden
+ */
+public enum Department {
+	IT, HR, SALES, FINANCE
 }
